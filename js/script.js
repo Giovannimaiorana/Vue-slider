@@ -47,7 +47,13 @@ createApp({
         },
         autoPlay(){
             return play = setInterval(this.gotoNext,4000);
-        }
+        },
+        stophover(){
+            clearInterval(play);
+        },
+        hoverauto(){
+            this.autoPlay();
+        }    
     },
     mounted(){
         this.autoPlay();
